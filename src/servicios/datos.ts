@@ -237,7 +237,7 @@ export async function programarTurno(
   await guardar();
 }
 
-export async function vincularSensor(): Promise<void> {
+export async function vincularSensor(codigo?: string): Promise<void> {
   const datos = await almacen();
   datos.sensoresTotales += 1;
   await guardar();

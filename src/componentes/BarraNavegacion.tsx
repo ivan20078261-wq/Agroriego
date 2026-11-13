@@ -1,5 +1,6 @@
 import { Pressable, Text, StyleSheet, View } from "react-native";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { router } from "expo-router";
 import { TabTrigger, TabTriggerSlotProps } from "expo-router/ui";
 import type { ComponentProps } from "react";
 import { estilos, colores } from "../../estilos";
@@ -41,7 +42,7 @@ export default function BarraNavegacion() {
         </TabTrigger>
       ))}
 
-      <Pressable style={estilos.fab}>
+      <Pressable style={estilos.fab} onPress={() => router.push("/Sensores")}>
         <Text
           style={{
             color: colores.sobrePrimario,

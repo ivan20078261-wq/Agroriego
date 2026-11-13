@@ -499,7 +499,7 @@ export default function Sensores() {
       Alert.alert("Código inválido", "Ingresá el código del sensor LoRa (4+ caracteres).");
       return;
     }
-    await vincularSensor();
+    await vincularSensor(codigo);
     setVincularVisible(false);
     setCodigoSensor("");
     await refrescar();
